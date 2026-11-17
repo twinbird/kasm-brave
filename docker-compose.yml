@@ -1,0 +1,11 @@
+services:
+  brave:
+    build: .
+    image: kasm-brave-ja
+    container_name: kasm-brave
+    shm_size: "1gb"
+    ports:
+      - "6901:6901"
+    environment:
+      - VNC_PW=${VNC_PW:-password}
+    restart: "no"
